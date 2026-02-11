@@ -1,0 +1,184 @@
+body {
+    background-color: #00d6ff;
+    font-family: 'Impact', 'Arial Black', 'Helvetica Bold', sans-serif;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.app {
+    max-width: 900px;
+    width: 100%;
+    margin: 0;
+    background-color: #57559a; /* ffd166 */
+    border: 4px solid #000;
+    box-shadow: 8px 8px 0 #000;
+    padding: 15px 20px;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+/* ========== ЗАГОЛОВКИ ========== */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #000;
+    padding-bottom: 6px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #000;
+    padding-bottom: 5px;
+}
+
+/* ========== СЕКЦИИ ========== */
+.date-selector,
+.session-selector,
+.seat-map {
+    margin-bottom: 20px;
+}
+
+/* ========== КНОПКИ ДАТ И СЕАНСОВ ========== */
+.brutalist-button {
+    background-color: #06d6a0;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    margin: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 0;
+    transition: none;
+}
+
+.brutalist-button.active {
+    background-color: #ef476f;
+    color: #fff;
+    box-shadow: 2px 2px 0 #000;
+    transform: translate(2px, 2px);
+}
+
+/* Архивные кнопки */
+.brutalist-button.archived {
+    opacity: 0.6;
+    background-color: #a0a0a0;
+    box-shadow: 4px 4px 0 #333;
+    color: #222;
+    border-color: #333;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.brutalist-button.archived:hover {
+    background-color: #8a8a8a;
+    transform: translate(-1px, -1px);
+    box-shadow: 6px 6px 0 #333;
+}
+
+.brutalist-button.archived.active {
+    background-color: #6b6b6b;
+    color: #fff;
+    box-shadow: 2px 2px 0 #333;
+    transform: translate(2px, 2px);
+    opacity: 0.9;
+}
+
+/* ========== СЕТКА МЕСТ ========== */
+.seat-grid-container {
+    background-color: #26547c;
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0 #000;
+    padding: 15px 10px;
+    margin-top: 15px;
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+/* Сами места */
+.seat {
+    width: 57px;
+    height: 57px;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #000;
+    font-weight: 900;
+    font-size: 20px;
+    box-shadow: 5px 5px 0 #000;
+    border-radius: 0;
+    transition: none;
+    color: white;
+    text-shadow: none;
+}
+
+/* цвет обычной кнопки */
+.seat.free {
+    background-color: #06d6a0;
+}
+
+/* цвет активной кнопки */
+.seat.booked {
+    background-color: #ef476f;
+}
+
+/* Hover эффект для свободных мест */
+.seat.free:hover {
+    animation: brutalist-hover 0.2s ease-out forwards;
+}
+
+@keyframes brutalist-hover {
+    100% {
+        transform: translate(-3px, -3px);
+        box-shadow: 8px 8px 0 #000;
+    }
+}
+
+/* ========== АНИМИРОВАННЫЙ ФОН ========== */
+.bg {
+    position: fixed;
+    top: 0;
+    left: -50%;
+    right: -50%;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.45;
+    pointer-events: none;
+
+    /* Колонки кругов: сетка с шагом 60px */
+    background-image: radial-gradient(circle at center, #004f6f 2.5px, transparent 2.5px);
+    background-size: 60px 60px;
+    background-repeat: repeat;
+
+    animation: slide 8s ease-in-out infinite alternate;
+}
+
+.bg2 {
+    animation-duration: 16s;
+    animation-delay: -4s;
+    opacity: 0.25;
+    background-size: 75px 75px; /* разреженная сетка */
+}
+
+/* горизонтальное скольжение */
+@keyframes slide {
+    0% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(20%);
+    }
+}
