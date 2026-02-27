@@ -32,26 +32,26 @@
 
 1. Клонируйте репозиторий:
 ```bash
-    git clone https://github.com/Whimsy-rat-trap/Cinema-tickets.git
+git clone https://github.com/Whimsy-rat-trap/Cinema-tickets.git
 ```
 
 2. Перейдите в папку проекта cd cinema-tickets
 
 3. Установите зависимости:
 ```bash
-    npm install
+npm install
 ```
 
 4. Запустите проект в режиме разработки:
 ```bash
-    npm start
+npm start
 ```
 
 5. Откройте http://localhost:3000 в браузере.
 
 6. Сборка для продакшена:
 ```bash
-    npm run build
+npm run build
 ```
 
 ## Скрипты
