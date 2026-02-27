@@ -32,25 +32,23 @@
 
 1. Клонируйте репозиторий:
 
-git clone https://github.com/your-username/cinema-tickets.git
+    git clone https://github.com/your-username/cinema-tickets.git
 
-2. Перейдите в папку проекта:
-
-cd cinema-tickets
+2. Перейдите в папку проекта cd cinema-tickets
 
 3. Установите зависимости:
 
-npm install
+    npm install
 
 4. Запустите проект в режиме разработки:
 
-npm start
+    npm start
 
 Откройте http://localhost:3000 в браузере.
 
 5. Сборка для продакшена:
 
-npm run build
+    npm run build
 
 
 ## Скрипты
