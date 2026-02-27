@@ -31,25 +31,28 @@
 ## Установка и запуск
 
 1. Клонируйте репозиторий:
-
-    git clone https://github.com/your-username/cinema-tickets.git
+```bash
+    git clone https://github.com/Whimsy-rat-trap/Cinema-tickets.git
+```
 
 2. Перейдите в папку проекта cd cinema-tickets
 
 3. Установите зависимости:
-
+```bash
     npm install
+```
 
 4. Запустите проект в режиме разработки:
-
+```bash
     npm start
+```
 
-Откройте http://localhost:3000 в браузере.
+5. Откройте http://localhost:3000 в браузере.
 
-5. Сборка для продакшена:
-
+6. Сборка для продакшена:
+```bash
     npm run build
-
+```
 
 ## Скрипты
 
